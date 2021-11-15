@@ -1,3 +1,4 @@
+const { performance } = require('perf_hooks');
 // For problems 1-2 use the following lines of code:
 var arr = [10,20,30,40,50,60]
 
@@ -198,6 +199,8 @@ switch (letterGrade){
 */
 
 //Code Here
+//My method
+// let startTime = performance.now();
 for (let i = 1; i <= 100; i++){
   if (i % 3 === 0){
     if (i % 5 === 0){
@@ -211,3 +214,28 @@ for (let i = 1; i <= 100; i++){
     console.log(i);
   }
 }
+// let endTime = performance.now();
+// let myMethodTime = endTime -startTime;
+
+// //Method from Solution
+// startTime = performance.now();
+
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('Devmountain')
+//   } else if (i % 5 === 0) {
+//     console.log('mountain')
+//   } else if (i % 3 === 0) {
+//     console.log('Dev')
+//   } else {
+//     console.log(i)
+//   }
+// }
+
+// endTime = performance.now();
+// let solutionMethodTime = endTime - startTime;
+
+// console.log(`Solution method took ${myMethodTime} milliseconds`);
+// console.log(`Solution method took ${solutionMethodTime} milliseconds`);
+// console.log(`My method was ${solutionMethodTime-myMethodTime} milliseconds faster`)
+// console.log(`My method was ${Math.round((solutionMethodTime/myMethodTime)*100)/100} times faster`)
